@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	each val in files
+		div.
+			<audio id="#{val}">
+			<source src="/sound/#{val}" type="audio/mpeg">
+			</audio>
+		a(href="#", onclick="document.getElementById('#{val}').play()") #{val}
