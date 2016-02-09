@@ -3,7 +3,7 @@ extends layout
 block content
 	each val in files
 		div.
-			<audio id="#{val}">
-			<source src="/sound/#{val}" type="audio/mpeg">
+			<audio id="#{val.number}">
+			<source src="/sound/#{val.filename}" type="audio/mpeg">
 			</audio>
-		a(href="#", onclick="document.getElementById('#{val}').play()") #{val}
+		a(href="##{val.number}", onclick="document.getElementById('#{val.number}').play()") #{val.name}
