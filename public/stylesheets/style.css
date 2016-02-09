@@ -8,7 +8,19 @@ a {
 }
 
 div {
-	display: inline-block;
-	width:100px;
-	height:100px;
+	width:10em;
+	height:10em;
+	text-align: center;
+	border:1px solid black;
+	margin: 10px;
+	display: inline-table;
+    vertical-align: middle;
 }
+
+a {
+	width:10em;
+	height:10em;
+	display: table-cell;
+	vertical-align: middle;
+}
+
