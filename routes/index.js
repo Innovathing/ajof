@@ -8,7 +8,9 @@ router.get('/', function(req, res, next) {
 
   for (var i = 0; i < filenames.length; i++)
   {
-    splitted = filenames[i].split(" ");
+    splitted = filenames[i].split(".");
+    splitted.pop();
+    splitted = splitted[0].split(" ");
     number = splitted[0];
     splitted.shift(); // removes first element
     name = splitted.join(" ");
